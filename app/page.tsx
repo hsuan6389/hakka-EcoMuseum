@@ -6,9 +6,9 @@ import { databaseUpdatedAt, travelData } from "./travelData";
 type Message = { role: "user" | "assistant"; text: string; source?: string; sourceUrl?: string };
 
 const places = [
-  { name: "北埔老街", area: "新竹北埔", theme: "聚落文化", time: "90 分鐘", image: "/images/beipu-watercolor.png", note: "走入街屋、古蹟與擂茶日常。" },
-  { name: "峨眉湖畔", area: "新竹峨眉", theme: "自然地景", time: "60 分鐘", image: "/images/alley-watercolor.png", note: "從水岸看見山林與聚落共生。" },
-  { name: "樟之細路", area: "桃竹苗", theme: "歷史步道", time: "半日", image: "/images/alley-watercolor.png", note: "沿古道讀懂樟腦產業與移動記憶。" },
+  { name: "北埔老街", area: "新竹北埔", theme: "聚落文化", time: "90 分鐘", image: "images/beipu-watercolor.png", note: "走入街屋、古蹟與擂茶日常。" },
+  { name: "峨眉湖畔", area: "新竹峨眉", theme: "自然地景", time: "60 分鐘", image: "images/alley-watercolor.png", note: "從水岸看見山林與聚落共生。" },
+  { name: "樟之細路", area: "桃竹苗", theme: "歷史步道", time: "半日", image: "images/alley-watercolor.png", note: "沿古道讀懂樟腦產業與移動記憶。" },
 ];
 
 const quickQuestions = ["附近有什麼？", "幫我安排半日遊", "適合親子嗎？", "有哪些無障礙景點？"];
@@ -122,8 +122,8 @@ export default function Home() {
         </div>
         <div className="hero-collage" aria-label="北埔客庄風景拼貼">
           <div className="organic orange-shape"><span>HAKKA</span></div>
-          <figure className="hero-photo-main"><img src="/images/beipu-watercolor.png" alt="水彩繪製的北埔老街傳統街屋" /></figure>
-          <figure className="hero-photo-side"><img src="/images/alley-watercolor.png" alt="水彩繪製的北埔石板巷與傳統建築" /></figure>
+          <figure className="hero-photo-main"><img src="images/beipu-watercolor.png" alt="水彩繪製的北埔老街傳統街屋" /></figure>
+          <figure className="hero-photo-side"><img src="images/alley-watercolor.png" alt="水彩繪製的北埔石板巷與傳統建築" /></figure>
           <div className="route-stamp">台 3<br /><small>內山公路</small></div>
           <p className="vertical-note">山・城・人・生活</p>
         </div>
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="chat-body">
             <div className="bubble user-bubble">我有半天，帶著小孩，想認識北埔。</div>
             <div className="avatar">三</div>
-            <div className="bubble ai-bubble">可以從老街的生活故事開始，再一起動手做擂茶。步行距離不長，也容易安排休息。<div className="answer-card"><img src="/images/beipu-watercolor.png" alt="水彩繪製的北埔老街" /><span><small>第一站 · 09:30</small><b>北埔老街</b><em>停留 90 分鐘　↗</em></span></div><small className="citation">來源 3 筆　·　信心度高　·　2026.11 更新</small></div>
+            <div className="bubble ai-bubble">可以從老街的生活故事開始，再一起動手做擂茶。步行距離不長，也容易安排休息。<div className="answer-card"><img src="images/beipu-watercolor.png" alt="水彩繪製的北埔老街" /><span><small>第一站 · 09:30</small><b>北埔老街</b><em>停留 90 分鐘　↗</em></span></div><small className="citation">來源 3 筆　·　信心度高　·　2026.11 更新</small></div>
           </div>
           <div className="chat-input-fake">繼續問這段旅程… <button onClick={() => setChatOpen(true)}>↑</button></div>
           <div className="helpful">這個回答有幫助嗎？　<button>有</button><button>需要改進</button></div>

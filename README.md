@@ -44,9 +44,25 @@ public/images/      網站水彩圖片
 
 ## GitHub 上傳
 
-建立新的 GitHub repository 後，可將本資料夾中的全部檔案上傳。請勿上傳 `node_modules`、`dist` 或 `.wrangler`；這些項目已列入 `.gitignore`。
+1. 在 GitHub 建立新的 repository，預設分支使用 `main`。
+2. 將本資料夾中的全部檔案上傳到 repository 根目錄。
+3. 開啟 repository 的 `Settings` → `Pages`。
+4. 在 `Build and deployment` 的 `Source` 選擇 `GitHub Actions`。
+5. 回到 `Actions` 頁面，等待 `Deploy to GitHub Pages` 顯示綠色勾選。
+6. 部署完成後，GitHub 會在 `Settings` → `Pages` 顯示公開網址。
 
-本專案是 Vinext／Vite 網站。上傳 GitHub 只會保存原始碼；若要產生公開網站網址，仍需另外設定相容的網站託管服務。
+每次更新 `main` 分支，網站都會自動重新建置與發布。
+
+請勿上傳 `node_modules`、`dist`、`github-dist` 或 `.wrangler`；這些項目已列入 `.gitignore`。
+
+本專案同時保留 Vinext 本機開發方式與 GitHub Pages 靜態建置方式。`.github/workflows/deploy-pages.yml` 會自動完成 GitHub Pages 發布。
+
+若要在封包前自行檢查 GitHub Pages 版本，可執行：
+
+```bash
+npm run build:github
+npm run preview:github
+```
 
 ## 資料說明
 
